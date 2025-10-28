@@ -15,3 +15,7 @@ function multiply(a, b) {
 }
 
 const divide = (a, b) => a / b;
+
+let num1;
+let operator;
+let num2;
