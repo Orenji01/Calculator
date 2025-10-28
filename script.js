@@ -19,3 +19,7 @@ const divide = (a, b) => a / b;
 let num1;
 let operator;
 let num2;
+
+function operate(num1, operator, num2) {
+
+}
