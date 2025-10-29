@@ -1,0 +1,18 @@
+#calc-container {
+    width: 160px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#calc-container {
+    display: flex;
+}
+
+div>button {
+    width: calc(150px / 3);
+}
+
+#operator-button {
+    width: 160px;
+}
