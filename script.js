@@ -21,5 +21,7 @@ let operator;
 let num2;
 
 function operate(num1, operator, num2) {
-
+    multiply(num1, num2)
 }
+
+operate(num1, operator, num2)
