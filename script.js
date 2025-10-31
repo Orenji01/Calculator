@@ -84,7 +84,7 @@ addEventListener("click", (event) => {
                 break;
         }
     }
-    console.log(num1);
+
 })
 
 addEventListener("click", (event) => {
@@ -104,8 +104,7 @@ addEventListener("click", (event) => {
             display.value = ""
         }
     }
-    console.log(operator);
-    console.log(display.value);
+
 })
 
 addEventListener("click", (event) => {
@@ -155,9 +154,24 @@ addEventListener("click", (event) => {
                 break;
         }
     }
-    console.log(num2);
+
 
 })
+
+document.querySelector("#clear-button").addEventListener("click", () => {
+    num1 = "";
+    operator = undefined;
+    num2 = "";
+    display.value = "";
+    console.log(num1);
+    console.log(operator);
+    console.log(num2);
+})
+
+
+
+
+
 
 /* Gör tre eventlisteners en för första nummer variabeln, andra för operator variabeln
 och tredje för andra nummer variabeln */
