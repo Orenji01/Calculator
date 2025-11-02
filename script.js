@@ -1,4 +1,5 @@
 function add(a, b) {
+    console.log(a + b);
     return a + b;
 }
 
@@ -24,13 +25,15 @@ let num2 = "";
 
 function operate(a, b) {
     if (operator === "+") {
-        add(a, b)
+        console.log(a, b);
+
+        return add(a, b)
     } else if (operator === "-") {
-        sub(a, b)
+        return sub(a, b)
     } else if (operator === "*") {
-        multiply(a, b)
+        return multiply(a, b)
     } else if (operator === "/") {
-        divide(a, b)
+        return divide(a, b)
     }
 }
 
@@ -178,9 +181,14 @@ document.querySelector("#clear-button").addEventListener("click", () => {
 
 document.querySelector("#operator-button").addEventListener("click", () => {
     if (num1 !== "" && operator !== undefined && num2 !== "") {
-        if (operator === "+") {
+        num1 = Number(num1), num2 = Number(num2)
+        console.log(typeof (num1));
+        console.log(typeof (num1));
+        operate(num1, num2)
+        console.log(operate(num1, num2))
+        console.log(add);
 
-        }
+        display.value = operate(num1, num2)
     }
 })
 
@@ -218,3 +226,9 @@ addEventListener("click", (event) => {
 och tredje för andra nummer variabeln */
 
 //kom ihåg att ändra nummer variabelns värde från string till number
+
+
+/* Gör så att när man trycker på en siffra efter man har tryckt på lika med och
+fått ett tal så går återställs allt*/
+
+// Gruppera knapparna i klasser där ena är för operatorer och den andra är för siffror
