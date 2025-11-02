@@ -22,8 +22,16 @@ let num2 = "";
 
 
 
-function operate(num1, operator, num2) {
-    multiply(num1, num2)
+function operate(a, b) {
+    if (operator === "+") {
+        add(a, b)
+    } else if (operator === "-") {
+        sub(a, b)
+    } else if (operator === "*") {
+        multiply(a, b)
+    } else if (operator === "/") {
+        divide(a, b)
+    }
 }
 
 /* på operate funktionen gör så att om man trycker på lika med och man har trycket
@@ -168,17 +176,25 @@ document.querySelector("#clear-button").addEventListener("click", () => {
     console.log(num2);
 })
 
+document.querySelector("#operator-button").addEventListener("click", () => {
+    if (num1 !== "" && operator !== undefined && num2 !== "") {
+        if (operator === "+") {
+
+        }
+    }
+})
+
 addEventListener("click", (event) => {
     if (num1 !== "" && operator !== undefined && num2 !== "") {
         if (event.target.value === "+") {
             operator = "+"
-            Number(num1), Number(num2);
-            console.log(isNaN(num1))
-            console.log(isNaN(num2))
-            num1 += num2
-            console.log(num1)
+            Number(num1); Number(num2);
+            console.log(typeof (num1))
+            console.log(typeof (num2))
+            num1 = Number(num1) + Number(num2);
+            console.log(typeof (num1))
             num2 = "";
-            display.value = Number(num1)
+            display.value = num1
 
         } else if (event.target.value === "-") {
             operator = "-"
