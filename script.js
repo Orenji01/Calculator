@@ -168,6 +168,31 @@ document.querySelector("#clear-button").addEventListener("click", () => {
     console.log(num2);
 })
 
+addEventListener("click", (event) => {
+    if (num1 !== "" && operator !== undefined && num2 !== "") {
+        if (event.target.value === "+") {
+            operator = "+"
+            Number(num1), Number(num2);
+            console.log(isNaN(num1))
+            console.log(isNaN(num2))
+            num1 += num2
+            console.log(num1)
+            num2 = "";
+            display.value = Number(num1)
+
+        } else if (event.target.value === "-") {
+            operator = "-"
+            display.value = ""
+        } else if (event.target.value === "*") {
+            operator = "*"
+            display.value = ""
+        } else if (event.target.value === "/") {
+            operator = "/"
+            display.value = ""
+        }
+    }
+})
+
 
 
 
